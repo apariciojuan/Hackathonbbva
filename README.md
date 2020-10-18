@@ -8,9 +8,9 @@ APIs
 Recive:
 
 POST: 
-    'nombre' type Char 
-    'apellido' type Char 
-    'dni' type Char
+    'nombre' type Char, 
+    'apellido' type Char, 
+    'dni' type Char,
     'photo' type image
 
 
@@ -26,8 +26,8 @@ Recive:
 GET, UPDATE, REMOVE
 
 UPDATE 
-    'nombre' type Char 
-    'apellido' type Char 
+    'nombre' type Char,  
+    'apellido' type Char, 
     'dni' type Char
 
 
@@ -41,8 +41,8 @@ api/v1/usuario/{identificador}/
 Recive:
 
 POST: 
-    'image'
-    'numero_usuario'
+    'image' type image,
+    'numero_usuario'type Char
 
 
 api/v1/chequeo/facial/
