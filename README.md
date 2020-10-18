@@ -43,7 +43,9 @@ Recive:
 POST: 
     'image' type image,
     'numero_usuario'type Char
-
+    
+Return:
+{"result": 'ok'} or {"result": 'ko'}
 
 api/v1/chequeo/facial/
 
