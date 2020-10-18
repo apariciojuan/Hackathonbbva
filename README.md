@@ -1,17 +1,18 @@
-# Hackathonbbva
+# Hackathon BBVA
 
 
-APIs
+### APIs
 
 * Creamos un usuario nuevo.
 
 Recive:
 
 POST: 
-    'nombre' type Char, 
-    'apellido' type Char, 
-    'dni' type Char,
-    'photo' type image
+
+   > 'nombre' type Char   
+   > 'apellido' type Char   
+   > 'dni' type Char    
+   > 'photo' type bytes    
 
 
 api/v1/usuario/
@@ -26,11 +27,12 @@ Recive:
 GET, UPDATE, REMOVE
 
 UPDATE 
-    'nombre' type Char,  
-    'apellido' type Char, 
-    'dni' type Char
 
+   > 'nombre' type Char    
+   > 'apellido' type Char   
+   > 'dni' type Char  
 
+   > {identificador} es el numero personal identificatorio del cliente
 
 api/v1/usuario/{identificador}/
 
@@ -41,17 +43,20 @@ api/v1/usuario/{identificador}/
 Recive:
 
 POST: 
-    'image' type image,
-    'numero_usuario'type Char
-    
+
+> 'image' type bytes  
+> 'numero_usuario'type Char  
+
 Return:
-{"result": 'ok'} or {"result": 'ko'}
+
+> {"result": 'ok'} or {"result": 'ko'}
+
 
 api/v1/chequeo/facial/
 
 
 
 
-## License
+### License
 
-This project uses MIT license.
+This project uses [MIT license.](https://github.com/apariciojuan/Hackathonbbva/blob/main/LICENSE)
