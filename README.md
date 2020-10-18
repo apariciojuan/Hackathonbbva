@@ -7,13 +7,11 @@ APIs
 
 Recive:
 
-POST: 'nombre' type Char 
-
-      'apellido' type Char 
-
-      'dni' type Char
-
-      'photo' type image
+POST: 
+    'nombre' type Char 
+    'apellido' type Char 
+    'dni' type Char
+    'photo' type image
 
 
 api/v1/usuario/
@@ -27,11 +25,10 @@ Recive:
 
 GET, UPDATE, REMOVE
 
-UPDATE 'nombre' type Char 
-
-       'apellido' type Char 
-
-       'dni' type Char
+UPDATE 
+    'nombre' type Char 
+    'apellido' type Char 
+    'dni' type Char
 
 
 
@@ -39,13 +36,13 @@ api/v1/usuario/{identificador}/
 
 
 
-*cheque biometrico
+* cheque biometrico
 
 Recive:
 
-POST: 'image'
-
-      'numero_usuario'
+POST: 
+    'image'
+    'numero_usuario'
 
 
 api/v1/chequeo/facial/
