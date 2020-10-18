@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block content %}
+<section class="mt-5">
+    <div class="container">
+        <div class="col-md-12">
+            <h2 class="mb-4">Solicitud de autorizacion BBVA</h2>
+            {% if mensaje %}
+            <div class="mt-4 mb-4" style="color:blue;">
+                {{ mensaje }}
+            </div>
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="user" placeholder="Numero personal" required>
+                <button class="btn btn-primary">Solicitar</button>
+            </form>
+            <small>Ingrese el numero personal del cliente para que realize la autorización</small>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

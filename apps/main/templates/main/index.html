@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block content %}
+<section class="mt-5">
+    <div class="container">
+        <div class="col-md-12">
+        <h1>Chequeo indentidad digital facial</h1>
+           {% if mensaje %}
+           <div class="mt-4 mb-4" style="color:blue;">
+           {{ mensaje }}
+           </div>
+           {% endif %}
+        <form action="" method="post" enctype="multipart/form-data">    
+        
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary">chequear</button>
+            <a href="{% url 'perfil_lista' %}">Volver a lista de usuarios</a>
+        </form>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock content %}

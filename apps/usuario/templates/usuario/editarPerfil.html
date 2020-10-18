@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block content %}
+<section  class="mt-5">
+    <div class="container">
+        <h1>Editar usuario:</h1>
+        <div class="col-md-12">
+          {% if form.errors %}
+              <div class="alert alert-danger">
+                <strong>{{ form.errors }}</strong>
+              </div>
+              {% endif %}
+              {% for error in messages %}
+              <div class="alert alert-info">
+                <strong>{{ error|escape }}</strong>
+              </div>
+              {% endfor %}
+        <form action="" method="post">    
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary">Guardar</button>
+             <a href="{% url 'perfil_lista' %}">Volver a lista de usuarios</a>
+        </form>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock content %}

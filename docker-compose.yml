@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:11
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  dbmongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongodata:/data/db
+  redis:
+    image: redis
+    restart: always
+  web:
+    build: .
+    restart: always
+    ports:
+      - 443:443
+      - 80:80
+    volumes:
+      - .:/home/docker/code   
+    depends_on:
+      - db
+      - dbmongo
+      - redis
+
+volumes:
+  postgres_data:
+  mongodata:
