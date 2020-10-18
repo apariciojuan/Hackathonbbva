@@ -77,6 +77,17 @@ DATABASES = {
     }
 }
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'postgres',
+#        'USER': 'postgres',
+#        'PASSWORD': '',
+#        'HOST': 'db',
+#        'PORT': '',
+#    }
+#}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -120,10 +131,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticRoot')
 
 
 ## Config AWS media file production
-AWS_ACCESS_KEY_ID = 'cccccI'
-AWS_SECRET_ACCESS_KEY = 'cccc'
+AWS_ACCESS_KEY_ID = 'A'
+AWS_SECRET_ACCESS_KEY = '9'
 AWS_DEFAULT_REGION = 'eu-west-3'
-AWS_STORAGE_BUCKET_NAME = 'cccc'
+AWS_STORAGE_BUCKET_NAME = 't'
 AWS_DEFAULT_ACL = None
 AWS_S3_FILE_OVERWRITE = False
 AWS_QUERYSTRING_AUTH = False
@@ -144,3 +155,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
 }
+
+#SSL
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
