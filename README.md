@@ -54,7 +54,7 @@ Return:
 api/v1/chequeo/facial/
 
 
-## se complementa con una mini app que esta en este [repo](https://github.com/apariciojuan/Biolock---Hackathon-BBVA-2020-Fronted) 
+### se complementa con una mini app que esta en este [repo](https://github.com/apariciojuan/Biolock---Hackathon-BBVA-2020-Fronted) 
 
 
 ### License
